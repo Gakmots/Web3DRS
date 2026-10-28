@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><title>解析域名 · Web3 Domain Router</title><link rel="stylesheet" href="styles.css"><script type="module" src="resolve.js"></script></head>
+<body class="resolve-page" data-state="loading">
+  <header class="page-brand"><img src="icons/icon32.png" width="28" height="28" alt=""><span>Web3 Domain Router</span><span class="version">0.1.3</span></header>
+  <main class="resolve-card">
+    <div class="eyebrow">A NAME. A DESTINATION.</div>
+    <div class="domain-row"><h1 id="domain">打开你的 Web3 网站</h1><span id="suffix" class="suffix">WEB3</span></div>
+    <p id="source" class="muted">无需钱包 · 只读解析</p>
+    <div class="divider"></div>
+    <div class="state-row"><span id="spinner" class="spinner" aria-hidden="true"></span><h2 id="state" aria-live="polite">正在解析网站</h2></div>
+    <p id="message" class="message" role="status"></p>
+    <details id="diagnostics" class="diagnostics" hidden><summary>查看错误详情</summary><pre id="error-detail"></pre></details>
+    <p id="record" class="record"></p><p id="destination" class="destination"></p>
+    <div class="actions"><button id="retry" class="primary" hidden>重新解析</button><button id="open" class="primary" hidden>打开目标网站 ↗</button><button id="search" class="secondary">在 Google 中搜索 ↗</button></div>
+  </main>
+  <footer class="page-footer">域名解析不需要连接钱包，也不会请求签名。</footer>
+</body>
+</html>

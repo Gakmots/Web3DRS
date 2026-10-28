@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Web3 Domain Router</title><link rel="stylesheet" href="styles.css"><script type="module" src="popup.js"></script></head>
+<body class="popup">
+  <header class="popup-brand"><img src="icons/icon32.png" width="28" height="28" alt=""><strong>Web3 Domain Router</strong><span class="version">0.1.3</span></header>
+  <main>
+    <h1>域名，直接打开。</h1><p class="intro">在地址栏输入 <span class="code">name.eth</span> 或 <span class="code">name.sns</span>，回车即可。</p>
+    <section class="switches" aria-label="拦截设置">
+      <label class="switch-row"><span><strong>启用域名解析</strong><small>接管 .eth / .sns 网页导航</small></span><input type="checkbox" id="enabled" role="switch"><span class="toggle" aria-hidden="true"></span></label>
+      <label class="switch-row"><span><strong>接管 Google 域名搜索</strong><small>仅处理完整域名，保留普通搜索</small></span><input type="checkbox" id="google" role="switch"><span class="toggle" aria-hidden="true"></span></label>
+    </section>
+    <form id="lookup-form"><label for="lookup" class="field-label">也可以在这里打开</label><div class="input-row"><input id="lookup" placeholder="alice.eth / alice.sns" autocomplete="off" spellcheck="false" required maxlength="4096"><button class="primary" type="submit" aria-label="打开域名">↗</button></div></form>
+    <details><summary>Solana RPC 设置</summary><form id="rpc-form"><label for="rpc" class="field-label">HTTPS RPC 地址</label><input id="rpc" type="url" placeholder="https://solana-rpc.publicnode.com" spellcheck="false"><p class="hint">RPC 请求移除来源信息，保存前验证主网及账户读取。自定义地址单独授权，API Key 仅保存在此浏览器。</p><div class="rpc-buttons"><button id="save-rpc" type="submit" class="secondary">验证并保存</button><button id="reset-rpc" type="button" class="secondary">恢复默认</button></div></form></details>
+    <p id="status" class="popup-status" role="status" aria-live="polite">正在加载设置…</p>
+  </main>
+  <footer class="popup-footer"><span class="dot"></span>无需钱包 · 不改默认搜索引擎</footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "version": "0.1.3",
+  "outputs": [
+    "background.js",
+    "resolve.js",
+    "popup.js",
+    "chunks/sns-LKIRUKCS.js",
+    "chunks/chunk-RT5RJSRU.js",
+    "chunks/chunk-CPXGCU5W.js",
+    "chunks/chunk-B7JEI5LG.js"
+  ]
+}

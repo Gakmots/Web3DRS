@@ -1,0 +1,74 @@
+{
+  "manifest_version": 3,
+  "name": "Web3 Domain Router",
+  "version": "0.1.3",
+  "description": "自动接管 .eth / .sns 网页导航与 Google 完整域名搜索，解析并打开网站。",
+  "minimum_chrome_version": "120",
+  "permissions": [
+    "declarativeNetRequestWithHostAccess",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.eth/*",
+    "*://*.sns/*",
+    "*://google.com/*",
+    "*://www.google.com/*",
+    "*://google.com.hk/*",
+    "*://www.google.com.hk/*",
+    "*://google.com.tw/*",
+    "*://www.google.com.tw/*",
+    "*://google.co.jp/*",
+    "*://www.google.co.jp/*",
+    "*://google.co.uk/*",
+    "*://www.google.co.uk/*",
+    "*://google.de/*",
+    "*://www.google.de/*",
+    "*://google.fr/*",
+    "*://www.google.fr/*",
+    "*://google.ca/*",
+    "*://www.google.ca/*",
+    "*://google.com.au/*",
+    "*://www.google.com.au/*",
+    "*://google.com.sg/*",
+    "*://www.google.com.sg/*",
+    "*://google.co.in/*",
+    "*://www.google.co.in/*",
+    "https://solana-rpc.publicnode.com/*"
+  ],
+  "optional_host_permissions": [
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Web3 Domain Router",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "resolve.html"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; base-uri 'none'; connect-src https:;"
+  }
+}
